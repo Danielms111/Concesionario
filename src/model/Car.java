@@ -4,12 +4,14 @@ public class Car extends Vehiculo {
 
     protected int numberOfDoors;
     protected boolean polarizedWindows;
+    CarType carType;
 
-    public Car(double basePrice, double salePrice, String brand, String modell, double displacement, double mileage,boolean type, String plaque, boolean propertyCardd, String propertyCard, int numberOfDoors, boolean polarizedWindows){
+    public Car(String id, double basePrice, double salePrice, String brand, int modell, double displacement, double mileage,String type, String plaque, boolean propertyCardd, String propertyCard, int numberOfDoors, boolean polarizedWindows, CarType carType, TechnicalMechanicalReview review, Soat soat){
 
-        super(basePrice, salePrice, brand, modell, displacement, mileage, type, propertyCardd, propertyCard);
+        super(id, basePrice, salePrice, brand, modell, displacement, mileage, type, plaque, propertyCardd, propertyCard, review, soat);
         this.numberOfDoors = numberOfDoors;
         this.polarizedWindows = polarizedWindows;
+        this.carType = carType;
 
     }
 

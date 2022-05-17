@@ -4,6 +4,8 @@ public class Soat extends Document {
 
     private double amountOfCoverage;
 
+    protected int [][] documentoSOAT = new int [filas][columnas];
+
     public Soat(double price, int year, String image, double amountOfCoverage) {
 
         super(price, year, image);
@@ -23,6 +25,11 @@ public class Soat extends Document {
      */
     public void setAmountOfCoverage(double amountOfCoverage) {
         this.amountOfCoverage = amountOfCoverage;
+    }
+
+    public int getYear(){
+
+        return year;
     }
 
 }

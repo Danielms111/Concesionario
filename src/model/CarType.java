@@ -2,6 +2,6 @@ package model;
 
 enum CarType {
 
-    SEEDAN, CAMIONETA;
+    SEDAN, CAMIONETA;
     
 }

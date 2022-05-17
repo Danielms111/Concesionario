@@ -4,6 +4,8 @@ public class TechnicalMechanicalReview extends Document{
 
     private double gasLevels;
 
+    protected int [][] documentoTMR = new int [filas][columnas];
+
     public TechnicalMechanicalReview(double price, int year, String image, double gasLevels){
         super(price, year, image);
         this.gasLevels = gasLevels;

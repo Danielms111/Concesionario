@@ -2,9 +2,13 @@ package model;
 
 public abstract class Document {
 
+    public static final int filas = 4;
+    public static final int columnas = 4;
+
     protected double price;
     protected int year;
     protected String image;
+
 
     public Document(double price, int year, String image){
 

@@ -4,21 +4,27 @@ public abstract class Vehiculo {
 
     public static final int MAX_DOCUMENT = 2;
 
+    protected String id;
     protected double basePrice;
     protected double salePrice;
     protected String brand;
-    protected String modell;
+    protected int modell;
     protected double displacement;
     protected double mileage;
-    protected boolean type;
+    protected String type;
     protected String plaque;
     protected boolean propertyCardd;
     protected String propertyCard;
 
+    protected TechnicalMechanicalReview review;
+    protected Soat soat;
+
+
     private Document [] documents =  new Document [MAX_DOCUMENT];
 
-    public Vehiculo(double basePrice, double salePrice, String brand, String modell, double displacement, double mileage,boolean type, String plaque, boolean propertyCardd, String propertyCard){
+    public Vehiculo(String id, double basePrice, double salePrice, String brand, int modell, double displacement, double mileage,String type, String plaque, boolean propertyCardd, String propertyCard, TechnicalMechanicalReview review, Soat soat) {
 
+        this.id = id;
         this.basePrice = basePrice;
         this.salePrice = salePrice;
         this.brand = brand;
@@ -29,8 +35,23 @@ public abstract class Vehiculo {
         this.plaque = plaque;
         this.propertyCardd = propertyCardd;
         this.propertyCard = propertyCard;
+        this.review = review;
+        this.soat = soat;
     }
-    
+
+    /**
+     * @return String return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
 
     /**
      * @return double return the basePrice
@@ -148,14 +169,14 @@ public abstract class Vehiculo {
     /**
      * @return boolean return the type
      */
-    public boolean isType() {
+    public String getType() {
         return type;
     }
 
     /**
      * @param type the type to set
      */
-    public void setType(boolean type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -163,30 +184,39 @@ public abstract class Vehiculo {
     /**
      * @return Document return the documents
      */
-    public Document getDocuments() {
+    public Document[] getDocuments() {
         return documents;
     }
 
     /**
      * @param documents the documents to set
      */
-    public void setDocuments(Document documents) {
+    public void setDocuments(Document[] documents) {
         this.documents = documents;
     }
 
     /**
      * @return String return the modell
      */
-    public String getModell() {
+    public int getModell() {
         return modell;
     }
 
     /**
      * @param documents the documents to set
      */
-    public void setModel(String model) {
-        this.model = model;
+    public void setModel(int modell) {
+        this.modell = modell;
     }
+
+    public String informe(){
+
+        String out = "";
+
+        return out;
+    }
+
+
 
 
 
