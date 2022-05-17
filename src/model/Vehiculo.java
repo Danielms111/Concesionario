@@ -216,6 +216,26 @@ public abstract class Vehiculo {
         return out;
     }
 
+    public int getSoatYear(){
+
+        return soat.getYear();
+    }
+
+    public int getTechnicalReviewYear(){
+
+        return review.getYear();
+    }
+
+    public String getSoat(){
+
+        return soat.toString();
+    }
+
+    public String getTechnicalReview(){
+
+        return review.toString();
+    }
+
 
 
 

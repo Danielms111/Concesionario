@@ -26,4 +26,12 @@ public class TechnicalMechanicalReview extends Document{
         this.gasLevels = gasLevels;
     }
 
+    public String toString(){
+
+        return "Price: " + price + "\n" +
+               "Year: " + year + "\n" +
+               "Code: " + image + "\n" +
+               "Gas levels: " + gasLevels + "\n";
+    }
+
 }

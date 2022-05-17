@@ -32,4 +32,12 @@ public class Soat extends Document {
         return year;
     }
 
+    public String toString(){
+
+        return "Price: " + price + "\n" +
+               "Year: " + year + "\n" +
+               "Code: " + image + "\n" +
+               "Amount of coverage: " + amountOfCoverage + "\n";
+    }
+
 }

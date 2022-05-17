@@ -650,5 +650,45 @@ public class ParkingLot {
         return out;
 
     }
+
+    public String vehicleId(String id){
+
+        String out = "There is no vehicle with that ID";
+
+        for(Vehiculo cadena: vehiculos){
+
+            if(cadena.getId().equalsIgnoreCase(id)){
+
+                out = "\nThe code for the property card is: " + cadena.getPropertyCard() + "\n";
+
+                if(cadena.getSoatYear()>=2022){
+
+                    out += "\nVALID SOAT: " + "\n" + 
+                           cadena.getSoat() + "\n"; 
+                }else{
+
+                    out += "\nEXPIRED SOAT: " + "\n" + 
+                         cadena.getSoat() + "\n";
+
+                }
+
+                if(cadena.getTechnicalReviewYear()>=2022){
+
+                    out += "VALID TECHNICAL MECHANICAL REVIEW: " + "\n" + 
+                            cadena.getTechnicalReview() + "\n";
+
+                }else{
+
+                    out += "EXIRED TECHNICAL MECHANICAL REVIEW: " + "\n" + 
+                            cadena.getTechnicalReview() + "\n";
+
+                }
+            
+            }
+
+        }
+
+        return out;
+    }
     
 }

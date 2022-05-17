@@ -63,7 +63,7 @@ public class MainConsecionario {
 			generateReport();
 			break;
         case 4:
-            System.out.println("MOstrar documentos");
+            searchId();
             break;
         case 5:
             System.out.println("Mapa");
@@ -834,6 +834,19 @@ public class MainConsecionario {
         String out = "";
 
         System.out.println(parking.showReport());
+
+        return out;
+    }
+
+    public String searchId(){
+
+        String out = "";
+        String id = "";
+
+        System.out.println("Enter the id of the vehicle you want to search");
+        id = sc.nextLine();
+
+        System.out.println(parking.vehicleId(id));
 
         return out;
     }
