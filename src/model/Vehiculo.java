@@ -205,7 +205,7 @@ public abstract class Vehiculo {
     /**
      * @param documents the documents to set
      */
-    public void setModel(int modell) {
+    public void setModell(int modell) {
         this.modell = modell;
     }
 
@@ -235,9 +235,5 @@ public abstract class Vehiculo {
 
         return review.toString();
     }
-
-
-
-
 
 }

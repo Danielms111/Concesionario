@@ -14,6 +14,8 @@ public class ParkingLot {
     private ArrayList<Vehiculo> vehiculos;
 
     private Vehiculo [][] parking;
+    private int [][] mapa;
+
 
     private int [][] documentoSOAT = new int [filas][columnas];
     private int [][] documentoReview = new int [filas][columnas];
@@ -31,6 +33,8 @@ public class ParkingLot {
         vehiculos = new ArrayList<Vehiculo>();
         documentoSOAT = new int [filas][columnas];
         documentoReview = new int [filas][columnas];
+        mapa = new int[MAX_FILAS][MAX_COLUMNAS];
+
     }
 
     private String printNumeric(int[][] documentoSOAT) {
@@ -360,25 +364,44 @@ public class ParkingLot {
 
                 if(modell<2015&&type.equalsIgnoreCase("USED")){
 
-                    if(modell==2014&&j==1){
+                    if(modell==2014&&j==0 && parking[i][j] == null){
 
                         parking[i][j] = motorcycle;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell==2013&&j==2){
-
-                        parking[i][j] = motorcycle;
-
-                    }if(modell==2012&&j==3){
-
-                        parking[i][j] = motorcycle;
-
-                    }if(modell==2011&&j==4){
+                    }if(modell==2013&&j==1 && parking[i][j] == null){
 
                         parking[i][j] = motorcycle;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell<2011&&j==5){
+
+                    }if(modell==2012&&j==2 && parking[i][j] == null){
 
                         parking[i][j] = motorcycle;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell==2011&&j==3 && parking[i][j] == null){
+
+                        parking[i][j] = motorcycle;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell<2011&&j==4 && parking[i][j] == null){
+
+                        parking[i][j] = motorcycle;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
                     }
 
                 }
@@ -431,25 +454,45 @@ public class ParkingLot {
 
                 if(modell<2015&&type.equalsIgnoreCase("USED")){
 
-                    if(modell==2014&&j==1){
+                    if(modell==2014&&j==0 && parking[i][j] == null){
 
                         parking[i][j] = gasCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell==2013&&j==2){
 
-                        parking[i][j] = gasCar;
-
-                    }if(modell==2012&&j==3){
-
-                        parking[i][j] = gasCar;
-
-                    }if(modell==2011&&j==4){
+                    }if(modell==2013&&j==1 && parking[i][j] == null){
 
                         parking[i][j] = gasCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell<2011&&j==5){
+
+                    }if(modell==2012&&j==2 && parking[i][j] == null){
 
                         parking[i][j] = gasCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell==2011&&j==3 && parking[i][j] == null){
+
+                        parking[i][j] = gasCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell<2011&&j==4 && parking[i][j] == null){
+
+                        parking[i][j] = gasCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
                     }
 
                 }
@@ -500,25 +543,45 @@ public class ParkingLot {
 
                 if(modell<2015&&type.equalsIgnoreCase("USED")){
 
-                    if(modell==2014&&j==1){
+                    if(modell==2014&&j==0 && parking[i][j] == null){
 
                         parking[i][j] = electricCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell==2013&&j==2){
 
-                        parking[i][j] = electricCar;
-
-                    }if(modell==2012&&j==3){
-
-                        parking[i][j] = electricCar;
-
-                    }if(modell==2011&&j==4){
+                    }if(modell==2013&&j==1 && parking[i][j] == null){
 
                         parking[i][j] = electricCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell<2011&&j==5){
+
+                    }if(modell==2012&&j==2 && parking[i][j] == null){
 
                         parking[i][j] = electricCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell==2011&&j==3 && parking[i][j] == null){
+
+                        parking[i][j] = electricCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell<2011&&j==4 && parking[i][j] == null){
+
+                        parking[i][j] = electricCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
                     }
 
                 }
@@ -582,25 +645,45 @@ public class ParkingLot {
 
                 if(modell<2015&&type.equalsIgnoreCase("USED")){
 
-                    if(modell==2014&&j==1){
+                    if(modell==2014&&j==0 && parking[i][j] == null){
 
                         parking[i][j] = hybridCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell==2013&&j==2){
 
-                        parking[i][j] = hybridCar;
-
-                    }if(modell==2012&&j==3){
-
-                        parking[i][j] = hybridCar;
-
-                    }if(modell==2011&&j==4){
+                    }if(modell==2013&&j==1 && parking[i][j] == null){
 
                         parking[i][j] = hybridCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
 
-                    }if(modell<2011&&j==5){
+
+                    }if(modell==2012&&j==2 && parking[i][j] == null){
 
                         parking[i][j] = hybridCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell==2011&&j==3 && parking[i][j] == null){
+
+                        parking[i][j] = hybridCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
+
+                    }if(modell<2011&&j==4 && parking[i][j] == null){
+
+                        parking[i][j] = hybridCar;
+                        mapa[i][j] = 1;
+                        i=10;
+                        j=5;
+
                     }
 
                 }
@@ -689,6 +772,120 @@ public class ParkingLot {
         }
 
         return out;
+    }
+
+    public String printMap(){
+
+        String print ="";
+		for (int i=0; i<MAX_FILAS; i++ ) { // filas numbers.length
+			for (int j = 0; j <MAX_COLUMNAS; j++) { //columnas numbers[0].length
+				print += mapa[i][j] + " ";
+			}
+			print += "\n";
+		}
+		return print;
+    }
+
+    public String carList(){
+
+        String out = "";
+
+        for(Vehiculo cadena: vehiculos){
+
+
+            if(cadena.getModell()==2014){
+                out += "\n2014 VEHICLE: " + "\n" + 
+                cadena.toString() + "\n"; 
+            }
+        }
+
+        for(Vehiculo cadena: vehiculos){
+
+
+            if(cadena.getModell()==2013){
+                out += "\n2013 VEHICLE: " + "\n" + 
+                cadena.toString() + "\n"; 
+            }
+        }
+
+        for(Vehiculo cadena: vehiculos){
+
+
+            if(cadena.getModell()==2012){
+                out += "\n2012 VEHICLE: " + "\n" + 
+                cadena.toString() + "\n"; 
+            }
+        }
+
+        for(Vehiculo cadena: vehiculos){
+
+
+            if(cadena.getModell()<2011){
+                out += "\n-2011 VEHICLE: " + "\n" + 
+                cadena.toString() + "\n"; 
+            }
+        }
+
+
+        return out;
+    }
+
+    public String oldestAndNewer(){
+        String out = "";
+        String outt = "";
+        boolean f=true;
+
+        for(int i=0;i<MAX_FILAS;i++){
+            for(int j=0;j<MAX_COLUMNAS;j++){
+
+                if(parking[i][j] != null){
+
+                  if(parking[i][j].getModell() == 2014){
+                    out = "NEWER VEHICLE IN PARKING LOT:" + "\n" + parking[i][j].toString();
+                    f=false;
+                  }else if(parking[i][j].getModell() == 2013 && f){
+                    out = "NEWER VEHICLE IN PARKING LOT:" + "\n" + parking[i][j].toString();
+                    f=false;
+                  }else if(parking[i][j].getModell() == 2012 && f){
+                    out = "NEWER VEHICLE IN PARKING LOT:" + "\n" + parking[i][j].toString();
+                    f=false;
+                  }else if(parking[i][j].getModell() <= 2011 && f){
+                    out = "NEWER VEHICLE IN PARKING LOT:" + "\n" + parking[i][j].toString();
+                  }
+                  
+                  if(parking[i][j].getModell()<= 2011){
+                    outt = parking[i][j].toString() + "";
+                  }else if(parking[i][j].getModell() == 2012){
+                    outt = parking[i][j].toString() + "";
+                  }else if(parking[i][j].getModell()== 2013){
+                    outt = parking[i][j].toString() + "";
+                  }else if(parking[i][j].getModell()== 2014){
+                    outt = parking[i][j].toString() + "";
+                  }
+                }
+            }
+        }
+
+        return out + "\n" + "OLDEST VEHICLE IN PARKING LOT: " + "\n" + outt;
+    }
+
+    public double parkingOcupation(){
+
+        String out = "";
+        double cont =0;
+        double percentage;
+
+        for (int i=0;i<MAX_FILAS;i++){
+            for(int j=0;j<MAX_COLUMNAS;j++){
+
+                if(parking[i][j] != null){
+
+                    cont=cont +1;
+                }
+            }
+        }
+
+        return cont;
     }
     
 }

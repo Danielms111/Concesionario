@@ -66,10 +66,10 @@ public class MainConsecionario {
             searchId();
             break;
         case 5:
-            System.out.println("Mapa");
+            printParkingMap();
             break;
         case 6:
-            System.out.println("Reportes");
+            parkingReports();
             break;      
 		
 		default:
@@ -847,6 +847,53 @@ public class MainConsecionario {
         id = sc.nextLine();
 
         System.out.println(parking.vehicleId(id));
+
+        return out;
+    }
+
+    public String printParkingMap(){
+
+        String out = "";
+
+        System.out.println(parking.printMap());
+
+        return out;
+    }
+
+    public String parkingReports(){
+
+        String out = "";
+        int b;
+        boolean c=true;
+
+        do{
+            System.out.println("Pick an option: " + "\n"+
+                           "(1) Listado de vehiculos y su informacion en un rango de agnos" + "\n"+
+                           "(2) Datos del vehiculo mas antiguo y mas nuevo" + "\n" +
+                           "(3) Porcentaje de ocupacion del parqueadero" + "\n");
+            b = sc.nextInt();
+            sc.nextLine(); 
+
+            switch(b){
+
+               case 1:
+                   System.out.println(parking.carList());
+                   c=false;
+                   break;
+                case 2: 
+                    System.out.println(parking.oldestAndNewer());
+                    c=false;
+                    break;
+                case 3:
+                    double a;
+                    a=(parking.parkingOcupation()/50*100);
+                    System.out.println("The ocupation percentage of the parking lot is: " + a + "%");
+                    c=false;
+                   break;  
+                default:
+                   System.out.println("Wrong option");      
+            }
+        }while(c);
 
         return out;
     }
