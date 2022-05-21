@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 import model.ParkingLot;
 
+/**
+ * 
+ * @author Daniel Montezuma
+ */
 public class MainConsecionario {
 	
 	private Scanner sc;
